@@ -48,6 +48,13 @@ First, install the dependencies with `npm ci`. Then, you can start the applicati
 To configure *I can't believe it's not Valetudo*, create a file called `config.json` in the working directory.
 You can also run `npm start` to automatically create a default configuration file.
 
+For fhem it is better to have a fixed `"clientId"`, because normally ICBINV generate at every start a new `"clientId"`.
+To prevent that, i added a fixed `"clientId"`. Take a look in the `config.json` after first start.
+
+For creating a background process, install `PM2` with `npm install pm2@latest -g`.
+After that start the application in background with `pm2 start app.js`.
+To control the process type `pm2 status app.js` and for stopping type `pm2 stop app.js`.
+
 If you are running in docker, map the configuration file to `/app/config.json` .
 
 ## Integration with FHEM, ioBroker, openHAB etc
@@ -57,3 +64,7 @@ The map will also be available as base64-encoded string at `http://host:port/api
 
 By default, the image data is published via MQTT to `mqtt.topicPrefix/mqtt.identifier/MapData/map` as a raw binary image.<br/>
 If `mqtt.publishAsBase64` is set to `true`, the image data will instead be published as base64-encoded string, which can be useful for OpenHAB.
+
+## Update
+
+- 0.1 - Added fixed clientId for fhem and a bit more npm doku

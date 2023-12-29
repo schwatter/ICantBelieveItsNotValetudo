@@ -12,6 +12,7 @@
     }
   },
   "mqtt": {
+    "clientId": "clientId: 'valetudo_map_per',",
     "identifier": "rockrobo",
     "topicPrefix": "valetudo",
     "autoconfPrefix": "homeassistant",
