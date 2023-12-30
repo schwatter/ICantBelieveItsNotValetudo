@@ -48,8 +48,8 @@ First, install the dependencies with `npm ci`. Then, you can start the applicati
 To configure *I can't believe it's not Valetudo*, create a file called `config.json` in the working directory.
 You can also run `npm start` to automatically create a default configuration file.
 
-For fhem it is better to have a fixed `"clientId"`, because normally ICBINV generate at every start a new `"clientId"`.
-To prevent that, i added a fixed `"clientId"`. Take a look in the `config.json` after first start.
+For fhem it is better to have a strict `"clientId"`, because normally ICBINV generates at every start a new `"clientId"`.
+To prevent that, i added a strict `"clientId"`. Take a look in the `config.json` after first start.
 
 For creating a background process, install `PM2` with `npm install pm2@latest -g`.
 After that start the application in background with `pm2 start app.js`.
