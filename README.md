@@ -67,4 +67,4 @@ If `mqtt.publishAsBase64` is set to `true`, the image data will instead be publi
 
 ## Update
 
-- 0.1 - Added fixed clientId for fhem and a bit more npm doku
+- 0.1 - Added strict clientId for fhem and a bit more npm doku
